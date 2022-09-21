@@ -8,7 +8,7 @@ let footer = document.querySelector('footer');
 
 let copyright = document.createElement('p');
 
-copyright.innerHTML = `Tracy ${thisYear}`;  
+copyright.innerHTML = `Tracy Cano © ${thisYear}`;  
 
 footer.appendChild(copyright);
 
