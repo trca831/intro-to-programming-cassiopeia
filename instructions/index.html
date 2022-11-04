@@ -14,21 +14,31 @@
 </head>
 
 <body>
-  <div class="row"> 
-  <div class="column"> <!-- first column-->
+  <nav class= "topnav" position="sticky">
+    <a class="active" href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#connect">Connect</a>
+    <a href="#education">Education</a>
+    <a href="#message">Message</a>
+  </nav>
+
+  
+    <!--<div class="row"> 
+  <div class="column"> commentint out first column-->
     
     <h4>Tracy Cano</h4>
     <section>
       <img src = "tracy.JPG" width= "150" alt ="My Profile Picture" class="center"/>
     </section>
   
-          <section>
+          <section id="about">
           <h2>About</h2>
           <table> 
             <p> I am an aspiring software engineer. 
               I am currently halfway done with the <strong>Code the Dream</strong> software development bootcamp. 
             </p> 
-
+       
           <p>I am interested in learning about: </p>
           <ul>
             <li>Front End React.js </li> 
@@ -62,11 +72,16 @@
           </ul>
         </table>
         </section>
-</div> <!--end of first column-->
+  
+<!--</div> end of first column-->
 
-<div class = "column"> <!-- 2nd column starts here-->
-<section class="experience">
-  <h2>Experience</h2> 
+
+
+<!-- <div class = "column">  2nd column starts here-->
+  
+  <!--
+  <section id="experience" class="experience">
+    <h2>Experience</h2> 
   <ul>
     <li>Web Development Intern</li>
     <li>Relief Manager</li>
@@ -75,24 +90,40 @@
     <li>Youth Employment Specialist</li>
   </ul>  
 </section>
+-->
 
-<section id="skills">
-  <h2>Skills</h2>
+<h2>Experience</h2>
+
+<div class="flex-container" id="experience">
+  <div>Web Development Intern</div>
+  <div>Relief Manager</div>
+  <div>Behavior Interventionist</div>
+  <div>Office Clerk</div>
+  <div>Youth Employment Specialist</div>
+</div>
+
+<h2>Skills</h2>
+<section class="flex-container" id="skills">
   <ul></ul>
 </section>
 
-<section> 
-  <h3>Connect With Me!</h3>
+<section class="project" id="project-section">
+  <h2>Projects</h2>
+  <ul></ul>
+</section>
+
+<section id="connect"> 
+  <h2>Connect With Me!</h2>
     <ul>
     <li> <a href="https://github.com/trca831/trca831"> Github</a> </li>
   <li> <a href="xhttps://www.linkedin.com/in/tracy-cano-24592b70/"> LinkedIn</a> </li>
 </ul>
 </section>
 
-<section>
+<h2> Education </h2>
+<section id="education">
   <table>
-    <h3> Education </h3>
-
+    
     <tr>
       <td> <strong> CTD</strong></td>
       <td> Software Development </td>
@@ -112,21 +143,21 @@
     </tr>
   </table>
 </section>
-        
-      <section class = "message"> 
-        <h2> Leave a message!</h2>
+
+<h2>Leave a Message!</h2>
+      <div id="message" class="message flex-container"> 
             <form name = "leave_message" class="message-form"> 
-              <div class="name">
+              <section class="name">
               <label for="name"> Name: </label>
               <br/>
-                <input type="text" 
+                <input type= "text" 
                         name = "name"
                         required = "true"
-                        placeholder="Enter name"
+                        placeholder= "Enter name"
                         />
-                        </div>
+              </section>
               <br/>
-              <div class = "email">
+              <section class = "email" >
               <label for="email"> Email: </label>
               <br/>
                 <input type="email" 
@@ -134,29 +165,35 @@
                         required = "true"
                         placeholder="Enter name"
                         />
-            </div>
+              </section>
             <br/>
-            <div class = "message1">
+            <section class = "message1">
               <label for="message"> Message:</label>
               <br/>
                   <textarea name="message"> </textarea>
-                  </div>
+            </section>
               <!-- <div class = "submitButton"> -->
               <button class="submit">Submit </button>
             <!--</div> -->
           </div>
             </form>
-      </section>
+          <!-- </div> -->
 
-      <section id = "messages">
+      <section id = "messages" style="visibility:hidden">
         <h2 id = "messages_header">Messages</h2>
         <ul></ul>
       </section>
 
-  </div> <!-- end of 2nd column container-->
-</div>   <!-- row div container-->
+<!--  </div>  end of 2nd column container-->
+<!--</div>    row div container-->
 
-<footer> <div class = "footer"></div> </footer> 
+<footer> <div class = "footer"></div> 
+<span class="links">
+       <a href="https://github.com/trca831/trca831"> Github</a> 
+       <a href="xhttps://www.linkedin.com/in/tracy-cano-24592b70/"> LinkedIn</a> 
+</span>
+
+</footer> 
 <script src = "js/index.js">  </script>
 
 </body>

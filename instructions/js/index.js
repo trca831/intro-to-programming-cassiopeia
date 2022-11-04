@@ -1,10 +1,78 @@
 const today = new Date(); 
+const projectSection = document.querySelector('#project-section');
 
 let thisYear = today.getFullYear();
 let footer = document.querySelector('footer'); 
 let copyright = document.createElement('p');
+copyright.classList.add("copyright");
 copyright.innerHTML = `© Tracy Cano ${thisYear}`;  
 footer.appendChild(copyright);
+
+
+// const githubRequest = new XMLHttpRequest();
+// githubRequest.open("GET", "http://api.github.com/users/trca831/repos");
+// githubRequest.send();
+
+fetch('http://api.github.com/users/trca831/repos')
+  .then((response) => response.json())
+  .then(afterReponse)
+  .catch(handleErrors);
+
+
+//githubRequest.onreadystatechange = () => {
+  //if (githubRequest.readyState === XMLHttpRequest.DONE && githubRequest.status == 200) {
+    // console.log("Success");
+    // console.log(project-section);
+   // bring back. const response = JSON.parse(githubRequest.responseText);
+   // console.log("here's our response", response);
+   function afterReponse(response) {
+    for (let i = 0; i < response.length; i++){
+      let project = document.createElement("li");
+      project.innerHTML = `<a href="${response[i].html_url}" target="_blank">${response[i].name}</a>`;
+      let details = document.createElement("ul");
+      let description = document.createElement("li");
+     description.innerHTML = response[i].description;
+      details.appendChild(description);
+     let date = document.createElement("li");
+      date.innerHTML = response[i].created_at;
+      details.appendChild(date);
+      project.appendChild(details);
+      //if(i === 0) console.log(response[i]);
+      //project.classList.add("projects");
+      projectSection.appendChild(project);
+    }
+ }
+// this is for line 21 githubRequest.onreadystatechange...}
+
+
+
+function handleErrors (error){
+  console.log("unable to load github api", error);
+  let item = document.createElement("li");
+  item.innerHTML = "unable to load repositories. Please try again later.";
+  projectSection.appendChild(item);
+}
+
+
+
+// function hydrateList(sectionId, item){
+//   const section = document.querySelector(sectionId);
+//   const ul = section.querySelector('ul');
+//   for(let i =0; i <items.length; i++){
+//     const item = document.createElement;
+// const item = items[i]
+// if(item.name){
+//   const repoLink = document.createElement('a');
+//   repoLink.href = item.url;
+//   repoLink.innerText = item.name;
+//   listItem.appendChild(repoLink);
+//   } else {
+//  listItem.innerText = skills[i];
+//  }
+//  ul.appendChild(item);
+
+//   }
+//  }
 
 let skills = ["JavaScript", "Java", "HTML5", "CSS"];
 let skillsSection = document.querySelector('#skills');
@@ -15,6 +83,8 @@ for(let i = 0; i < skills.length; i++){
     skill.innerText = skills[i];
     skillsList.appendChild(skill);
 }
+
+//hydrateList('#skills', skills);
 
 let messageForm = document.querySelector('[name="leave_message"]');
 let messageCount = 0;
@@ -81,3 +151,22 @@ editButton.addEventListener("click", (e) => {
 });
 });
 
+
+
+// function handleResponse(){
+//   const repositories = JSON.parse(this.response); 
+// const repos = repositories.map(repo => (
+//   {
+//     name: repo.name,
+//     url: repo.html_url
+//   }
+// )); 
+//   hydrateList('#projects', repositories.map(repo => repo.name));
+//   console.log(repositories[0].name);
+//   console.log(repositories);
+// }
+
+// const githubRequest = new XMLHttpRequest();
+//   githubRequest.addEventListener('load', handleResponse)
+//   githubRequest.open('GET', 'http://api.github.com/users/trca831/repos')
+//   githubRequest.send();
