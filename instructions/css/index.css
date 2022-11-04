@@ -1,0 +1,327 @@
+
+/* Add a black background color to the top navigation */
+nav {
+  position: fixed;
+}
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  position: sticky;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 50px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content{
+  padding-top: 60px;
+} */
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50px;
+}
+
+ul {
+  background: lightcyan;
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  width: fit-content;
+  font-size: 20px;
+}
+
+ul li {
+  
+  background: #cce5ff;
+  color: darkblue;
+  margin: 5px;
+  font-size: 40px;
+}
+
+.header {
+      background-color: green;
+      text-align: center;
+      padding: 10px;
+    }
+
+.footer {
+      background-color: green;
+      text-align: center;
+      padding: 10px;
+      color: white;
+    }
+
+.column {
+      float: left;
+      width: 1100px;
+      padding: 10px;
+      background-color: white;
+      border-style:groove;
+    }
+
+.row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+/* 
+    @media screen and (max-width:600px) {
+      .column {
+        width: 100%;
+      }
+    } */
+
+  body {
+    /*background-image: url("/instructions/tracy.JPG");
+    background-size: 100%; */
+    background-color:whitesmoke;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    font-size: 30px;
+  }
+
+  h1 { 
+    color: rgb(10, 10, 10);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-size: 120px;
+    
+  }
+
+  h2 {
+    color: green;
+    text-align: center;
+    font-size: 50px;
+  }
+
+  h3 {
+    color: darkblue;
+    text-align: left;
+    font-size:40px;
+  }
+
+  h4 {
+    color: purple;
+    text-align: center;
+    font-size:50px;
+    font-weight: 900;
+  }
+
+  section {
+    padding: 3px;
+  }
+
+  p {
+    font-family: verdana;
+    font-size: 30px;
+    padding: 5px;
+    
+  }
+
+  .copyright {
+    text-align: center;
+  }
+
+  #messages ul {
+    display: flex;
+  }
+
+  .message {
+    border-style:dashed;
+    background-color: grey;
+    width: 900px;
+    border: 15px solid blue;
+    padding: 50px;
+    margin: 20px;
+    font-size: 50px;
+    color: purple;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #skills {
+    background-color: grey;
+    width: 500px;
+    border: 15px solid blue;
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+  }
+
+  input[type=text]{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    font-size: 60px;
+    box-sizing: border-box;
+  }
+
+  input[type=email]{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    font-size: 60px;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    width: 50%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 60px;
+    resize: none;
+  }
+
+  input[type=submit] {
+    size: 100px;
+    background-color:rgb(5, 6, 6);
+    border: 30px;
+    color: red;
+    padding: 16px 32px;
+    text-decoration: double;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .footer {
+    text-align: center;
+    background-color: green;
+    padding: 50px;
+    
+  }
+
+  .links{
+    float: right;
+  }
+
+  button {
+    background-color: lightblue;
+    border: none;
+    color: purple;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 50px;
+  }
+
+  .submit {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+
+  .remove-button {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+
+  .edit-button {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+
+ /* @media screen and (max-width:600px) {
+    .column {
+      width: 100%;
+    }
+  }
+  */
+
+  /* New Experience Section */
+ 
+  .flex-container {
+  display: flex;
+  background-color: grey;
+  border: 15px solid blue;
+}
+
+.flex-container > div {
+  background-color: lightblue;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+@media screen and (min-width: 1000px) {
+  .gfg-div {
+    background-color: #346abb;
+    color: #fff;
+  }
+}
+
+@media screen and (min-device-width: 700px)
+and (max-device-width: 1000px) {
+  .gfg-div {
+    width: 400px;
+    height: 400px;
+    background-color: rgb(64, 108, 218);
+    color: black;
+  }
+}
+
+@media screen and (max-device-width: 640px) {
+  .gfg-div {
+    width: 400px;
+    height: 200px;
+    background-color: rgb(0, 60, 255);
+    color: black;
+  }
+}
+
+@media (min-device-height: 667px) and (min-device-width: 375px)
+and (-webkit-min-device-pixel-ratio: 3) {
+  .gfg-div {
+    width: 400px;
+    height: 400px;
+    background-color: rgb(11, 112, 184);
+    color: black;
+  }
+}
+
+/*Old Experience Section
+
+.experience {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: grey;
+  width: 500px;
+  border: 15px solid blue;
+  padding: 100px;
+  margin: 100px;
+}
+
+.experience ul {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 100 px;
+}
+
+*/

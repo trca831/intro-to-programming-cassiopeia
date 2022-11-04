@@ -1,92 +1,129 @@
 <!DOCTYPE html> 
-<html>
+<html lang = "en">
 <head>
-  <h1> Tracy Cano</h1>
-    <meta charset="UTF-8">
-    <meta name="keywords" content="HTML, CSS, JavaScript, Java">
-    <meta name="author" content="Tracy Cano">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <section>
-      <img src = "tracy.JPG" width= "150" alt ="My Profile Picture" class="center"/>
-    </section>
-
+      <div class="header">
+      <h1> Code the Dream</h1>
+      <title>Tracy Cano</title>
+      </div>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="HTML, CSS, JavaScript, Java">
+        <meta name="author" content="Tracy Cano">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="css/index.css"> 
 </head>
 
 <body>
-<section>
-  <h2>About</h2>
-  <table> 
-    <p> I am an aspiring software engineer. 
-      I am currently halfway done with the <strong>Code the Dream</strong> software development bootcamp. 
-      </p> 
+  <nav class= "topnav" position="sticky">
+    <a class="active" href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#connect">Connect</a>
+    <a href="#education">Education</a>
+    <a href="#message">Message</a>
+  </nav>
 
-  <p>I am passionate about learning about software development. 
-  My interest began a few years ago when I began to wonder about how to create a mobile application for fun. 
-  I love being creative and innovative. 
-  Since I can remember I always wanted to build my own mobile applications and some type of smart technology, 
-  such as the smart mirror, I just did not know where to start. </p>
+  
+    <!--<div class="row"> 
+  <div class="column"> commentint out first column-->
+    
+    <h4>Tracy Cano</h4>
+    <section>
+      <img src = "tracy.JPG" width= "150" alt ="My Profile Picture" class="center"/>
+    </section>
+  
+          <section id="about">
+          <h2>About</h2>
+          <table> 
+            <p> I am an aspiring software engineer. 
+              I am currently halfway done with the <strong>Code the Dream</strong> software development bootcamp. 
+            </p> 
+       
+          <p>I am interested in learning about: </p>
+          <ul>
+            <li>Front End React.js </li> 
+            <li>Back End Ruby on Rails </li>
+            <li>Full Stack Node.js/Express</li>  
+          </ul> 
 
-  <p>I am interested in learning about: </p>
+          <p> My goal is to start working on projects, such as: 
+            <ul>
+              <li>Dynamic Websites</li>
+              <li>Mobile Apps</li>
+              <li>Innovative Interactive Behaviors</li>
+            </ul>  
+          </p> 
+              
+          <p>Since 2021, I have been trying to find ways to grow in this field. </p>
+          <p>I have: </p>
+          <ul>
+            <li>Taken Intro to Java Programming - Part A</li> 
+            <li><strong>Enrolled</strong> in Intro to Java Programming - Part B </li>
+            <li>Used SoloLearn to improve my skills</li>  
+            <li>Applied to <strong>Code the Dream</strong> to become a <em>software engineer</em>.</li>
+          </ul>
+
+          <p>I want to continue enhancing my skills with:</p>
+          <ul>
+            <li>LeetCode</li>
+            <li>CodeWars</li>
+            <li>HackerRank</li>
+            <li>CodeChef</li>
+          </ul>
+        </table>
+        </section>
+  
+<!--</div> end of first column-->
+
+
+
+<!-- <div class = "column">  2nd column starts here-->
+  
+  <!--
+  <section id="experience" class="experience">
+    <h2>Experience</h2> 
   <ul>
-    <li>Front End React.js </li> 
-    <li>Back End Ruby on Rails </li>
-    <li>Full Stack Node.js/Express</li>  
-  </ul> 
-
-  <p> My goal is to start working on projects, such as: 
-    <ul>
-      <li>Dynamic Websites</li>
-      <li>Mobile Apps</li>
-      <li>Innovative Interactive Behaviors</li>
-    </ul>  
-      </p> 
-      
-  <p>Since 2021, I have been trying to find ways to grow in this field. </p>
-  <p>I have: </p>
-  <ul>
-    <li>Taken Intro to Java Programming - Part A</li> 
-    <li><strong>Enrolled</strong> in Intro to Java Programming - Part B </li>
-    <li>Used SoloLearn to improve my skills</li>  
-    <li>Applied to <strong>Code the Dream</strong> to become a <em>software engineer</em>.</li>
-  </ul>
-
-  <p>I want to continue enhancing my skills with:</p>
-  <ul>
-    <li>LeetCode</li>
-    <li>CodeWars</li>
-    <li>HackerRank</li>
-    <li>CodeChef</li>
-  </ul>
-
-</table>
+    <li>Web Development Intern</li>
+    <li>Relief Manager</li>
+    <li>Behavior Interventionist</li>
+    <li>Office Clerk</li>
+    <li>Youth Employment Specialist</li>
+  </ul>  
 </section>
+-->
 
-<section>
-  <h2>Experience</h2> 
-  <h3>Cooperative Work Experience (COOP)</h3>
-  <p> I had a small role in a micro-internship to work on a team where we worked an actual website using PHP, HTML5, and Bootstrap as the CSS Framework.
-    We used HTML for the front-end, and the PHP as the backend. I worked on the HTML part of it. </p>
-</section>
+<h2>Experience</h2>
 
-<section id="skills">
-  <h2>Skills</h2>
+<div class="flex-container" id="experience">
+  <div>Web Development Intern</div>
+  <div>Relief Manager</div>
+  <div>Behavior Interventionist</div>
+  <div>Office Clerk</div>
+  <div>Youth Employment Specialist</div>
+</div>
+
+<h2>Skills</h2>
+<section class="flex-container" id="skills">
   <ul></ul>
-
 </section>
 
-<section> 
-  <h3>Connect With Me!</h3>
+<section class="project" id="project-section">
+  <h2>Projects</h2>
+  <ul></ul>
+</section>
+
+<section id="connect"> 
+  <h2>Connect With Me!</h2>
     <ul>
     <li> <a href="https://github.com/trca831/trca831"> Github</a> </li>
   <li> <a href="xhttps://www.linkedin.com/in/tracy-cano-24592b70/"> LinkedIn</a> </li>
 </ul>
 </section>
 
-<section>
+<h2> Education </h2>
+<section id="education">
   <table>
-    <h1> Education </h1>
-
+    
     <tr>
       <td> <strong> CTD</strong></td>
       <td> Software Development </td>
@@ -106,30 +143,58 @@
     </tr>
   </table>
 </section>
-      <section> 
-          <h2> Leave a message!</h2>
-            <form name = "leave_message"> 
+
+<h2>Leave a Message!</h2>
+      <div id="message" class="message flex-container"> 
+            <form name = "leave_message" class="message-form"> 
+              <section class="name">
               <label for="name"> Name: </label>
               <br/>
-              <input type="text" name = "name"/>
+                <input type= "text" 
+                        name = "name"
+                        required = "true"
+                        placeholder= "Enter name"
+                        />
+              </section>
               <br/>
+              <section class = "email" >
               <label for="email"> Email: </label>
               <br/>
-              <input type="email" name = "email"/>
-              <br/>
+                <input type="email" 
+                        name = "email"
+                        required = "true"
+                        placeholder="Enter name"
+                        />
+              </section>
+            <br/>
+            <section class = "message1">
               <label for="message"> Message:</label>
               <br/>
                   <textarea name="message"> </textarea>
-              <br/>
-              <button type="submit">Submit </button>
+            </section>
+              <!-- <div class = "submitButton"> -->
+              <button class="submit">Submit </button>
+            <!--</div> -->
+          </div>
             </form>
-      </section>
+          <!-- </div> -->
 
-      <section id = "messages">
-        <h2>Messages</h2>
+      <section id = "messages" style="visibility:hidden">
+        <h2 id = "messages_header">Messages</h2>
         <ul></ul>
       </section>
-<footer></footer> 
+
+<!--  </div>  end of 2nd column container-->
+<!--</div>    row div container-->
+
+<footer> <div class = "footer"></div> 
+<span class="links">
+       <a href="https://github.com/trca831/trca831"> Github</a> 
+       <a href="xhttps://www.linkedin.com/in/tracy-cano-24592b70/"> LinkedIn</a> 
+</span>
+
+</footer> 
 <script src = "js/index.js">  </script>
+
 </body>
 </html>
