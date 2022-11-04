@@ -9,23 +9,23 @@ copyright.innerHTML = `© Tracy Cano ${thisYear}`;
 footer.appendChild(copyright);
 
 
-// const githubRequest = new XMLHttpRequest();
-// githubRequest.open("GET", "http://api.github.com/users/trca831/repos");
-// githubRequest.send();
+let githubRequest = new XMLHttpRequest();
+githubRequest.open("GET", "http://api.github.com/users/trca831/repos");
+githubRequest.send();
 
-fetch('http://api.github.com/users/trca831/repos')
-  .then((response) => response.json())
-  .then(afterReponse)
-  .catch(handleErrors);
+// fetch('http://api.github.com/users/trca831/repos')
+//   .then((response) => response.json())
+//   .then(afterReponse)
+//   .catch(handleErrors);
 
-
-//githubRequest.onreadystatechange = () => {
-  //if (githubRequest.readyState === XMLHttpRequest.DONE && githubRequest.status == 200) {
+githubRequest.onreadystatechange = () => {
+  if (githubRequest.readyState === XMLHttpRequest.DONE 
+    && githubRequest.status == 200) {
     // console.log("Success");
     // console.log(project-section);
-   // bring back. const response = JSON.parse(githubRequest.responseText);
+   const response = JSON.parse(githubRequest.responseText);
    // console.log("here's our response", response);
-   function afterReponse(response) {
+  //function afterReponse(response) {
     for (let i = 0; i < response.length; i++){
       let project = document.createElement("li");
       project.innerHTML = `<a href="${response[i].html_url}" target="_blank">${response[i].name}</a>`;
@@ -38,10 +38,12 @@ fetch('http://api.github.com/users/trca831/repos')
       details.appendChild(date);
       project.appendChild(details);
       //if(i === 0) console.log(response[i]);
-      //project.classList.add("projects");
+      project.classList.add("projects");
       projectSection.appendChild(project);
     }
  }
+}
+
 // this is for line 21 githubRequest.onreadystatechange...}
 
 
