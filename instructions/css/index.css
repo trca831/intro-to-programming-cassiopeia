@@ -20,10 +20,6 @@ body {
   font: bold;
 }
 
-/* Add a black background color to the top navigation */
-/* nav {
-  position: fixed;
-} */
 .topnav {
   background-color: black;
   overflow:hidden;
@@ -46,8 +42,6 @@ body {
   background-color: #ddd;
   color: black;
 }
-
-
 
 title {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -84,7 +78,6 @@ img {
   border-color: #ccc;
   border-style: ridge;
   border-width: 1px;
-  /* box-shadow: 10px 10px 5px 12px black; */
 }
 
 .inline {
@@ -92,11 +85,8 @@ display: inline;
 }
 
 ul {
-  /* background: grey; */
-  /* list-style-type:none; */
   margin: 2px;
   padding: 1px;
-  /* width:fit-content; */
   font-size: 12px;
   flex-direction: row;
 }
@@ -109,23 +99,12 @@ ul li {
   font-size: 18px;
   flex-direction: row;
   padding: 4px;
-  
 }
 
 a, a:link, a:visited, a:focus, a:hover, a:active{
   color:hotpink;
-  /* text-decoration:none;  */
   cursor:grab;
 }
-
-
-
-/* .footer {
-      background-color: black;
-      text-align: center;
-      padding: 10px;
-      color: white;
-    } */
 
 .column {
       float: left;
@@ -140,13 +119,6 @@ a, a:link, a:visited, a:focus, a:hover, a:active{
       display: table;
       clear: both;
     }
-/* 
-    @media screen and (max-width:600px) {
-      .column {
-        width: 100%;
-      }
-    } */
-
 
   h1 { 
     color: rgb(10, 10, 10);
@@ -185,13 +157,9 @@ a, a:link, a:visited, a:focus, a:hover, a:active{
   h5 {
     color: white;
     text-align: left;
-    /* font-size:100px;
-    border-width: 2px;
-    margin: 2px;  */
   }
 
   #box {
-    /* background-image: url("/instructions/office.jpeg"); */
     background-color: black;
     background-repeat:repeat;
     background-size: cover;
@@ -206,10 +174,6 @@ a, a:link, a:visited, a:focus, a:hover, a:active{
     list-style-type: none;
     background-color: black;
   }
-
-  /* #connect {
-    background-color: black;
-  } */
 
   section {
     box-shadow: 6px 6px 6px black;
@@ -247,7 +211,6 @@ a, a:link, a:visited, a:focus, a:hover, a:active{
     border-style:ridge;
     background-color: grey;
     width: 500px;
-    /* border: 15px solid blue; */
     padding: 2px;
     margin: 5px;
     font-size: 24px;
@@ -283,14 +246,12 @@ a, a:link, a:visited, a:focus, a:hover, a:active{
     border-radius: 4px;
     background-color: #f8f8f8;
     font-size: 14px;
-    /* resize: none; */
   }
 
   input[type=submit] {
     size: 50px;
     background-color:rgb(5, 6, 6);
     border: 30px;
-    /* color: red; */
     padding: 16px 32px;
     text-decoration: double;
     margin: 2px 2px;
@@ -329,17 +290,11 @@ a, a:link, a:visited, a:focus, a:hover, a:active{
   .edit-button {
     box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   }
-
- 
- 
-
-  /* New Experience Section */
  
   .flex-container {
   display: flex;
   background-color: grey;
   border: 5px ridge white;
-  
 }
 
 .flex-container > div {
@@ -348,14 +303,11 @@ a, a:link, a:visited, a:focus, a:hover, a:active{
   padding: 2px;
   font-size: 20px;
   font-variant: small-caps;
-  
 }
 
 .skillsection {
   display: flex;
   justify-content: space-evenly;
-  /* padding: 15px 50px 20px 30px;
-  margin: 5px; */
   font-size: 400px;
 }
 
@@ -365,67 +317,3 @@ a, a:link, a:visited, a:focus, a:hover, a:active{
     flex-direction: column;
   }
 }
-
-/* @media screen and (min-width: 1000px) {
-  .gfg-div {
-    background-color: #346abb;
-    color: #fff;
-  }
-}
-
-@media screen and (min-device-width: 700px)
-and (max-device-width: 1000px) {
-  .gfg-div {
-    width: 400px;
-    height: 400px;
-    background-color: rgb(64, 108, 218);
-    color: black;
-  }
-}
-
-@media screen and (max-device-width: 640px) {
-  .gfg-div {
-    width: 400px;
-    height: 200px;
-    background-color: rgb(0, 60, 255);
-    color: black;
-  }
-}
-
-@media (min-device-height: 667px) and (min-device-width: 375px)
-and (-webkit-min-device-pixel-ratio: 3) {
-  .gfg-div {
-    width: 400px;
-    height: 400px;
-    background-color: rgb(11, 112, 184);
-    color: black;
-  }
-}
-
-@media screen and (max-width:600px) {
-  .column {
-    width: 100%;
-  }
-} */
-
-
-
-/*Old Experience Section
-
-.experience {
-  display: flex;
-  justify-content: space-evenly;
-  background-color: grey;
-  width: 500px;
-  border: 15px solid blue;
-  padding: 100px;
-  margin: 100px;
-}
-
-.experience ul {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 100 px;
-}
-
-*/
