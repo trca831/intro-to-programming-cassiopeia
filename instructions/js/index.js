@@ -75,7 +75,7 @@ function handleErrors (error){
 //   }
 //  }
 
-let skills = ["JavaScript", "Java", "HTML5", "CSS"];
+let skills = ["JavaScript", "Java", "HTML5", "CSS", "VS Code", "AJAX", "API", "Git", "GitHub"];
 let skillsSection = document.querySelector('#skills');
 let skillsList = skillsSection.querySelector("ul");
 
