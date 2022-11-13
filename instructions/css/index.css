@@ -1,12 +1,30 @@
-
-/* Add a black background color to the top navigation */
-nav {
-  position: fixed;
+body {
+  background-image: url("/instructions/galaxy.jpeg");
+  background-size: 100%;
+  background-repeat: repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: grey;
+  font-size: 20px;
 }
+
+#software {
+  background-image: url("/instructions/space.jpeg");
+  background-repeat:repeat;
+  background-size: cover;
+  opacity: 100%;
+}
+
+.software {
+  font: bold;
+}
+
 .topnav {
-  background-color: #333;
-  overflow: hidden;
-  position: sticky;
+  background-color: black;
+  overflow:hidden;
+  position:fixed;
+  margin-top: -40px;
 }
 
 /* Style the links inside the navigation bar */
@@ -14,9 +32,9 @@ nav {
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 4px 6px;
   text-decoration: none;
-  font-size: 50px;
+  font-size: 15px;
 }
 
 /* Change the color of links on hover */
@@ -25,58 +43,68 @@ nav {
   color: black;
 }
 
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
+title {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-display: swap;
+  background-color: #346abb;
 }
 
-/* .sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: none;
+  border-color: white;
+  border-width: 10px;
 }
 
-.sticky + .content{
-  padding-top: 60px;
-} */
+.image {
+  flex-basis: 40%;
+}
+
+.text {
+  font-size: 20px;
+  padding-left: 20px;
+}
 
 img {
+  float: center;
+  max-width: 100%;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 50px;
+  border-radius: 20px;
+  background-color: #333;
+  border-color: #ccc;
+  border-style: ridge;
+  border-width: 1px;
+}
+
+.inline {
+display: inline;
 }
 
 ul {
-  background: lightcyan;
-  list-style-type: none;
-  margin: 0;
-  padding: 10px;
-  width: fit-content;
-  font-size: 20px;
+  margin: 2px;
+  padding: 1px;
+  font-size: 12px;
+  flex-direction: row;
 }
 
 ul li {
-  
-  background: #cce5ff;
-  color: darkblue;
-  margin: 5px;
-  font-size: 40px;
+  list-style-type: none;
+  background: white;
+  color: black;
+  margin: 4px;
+  font-size: 18px;
+  flex-direction: row;
+  padding: 4px;
 }
 
-.header {
-      background-color: green;
-      text-align: center;
-      padding: 10px;
-    }
-
-.footer {
-      background-color: green;
-      text-align: center;
-      padding: 10px;
-      color: white;
-    }
+a, a:link, a:visited, a:focus, a:hover, a:active{
+  color:hotpink;
+  cursor:grab;
+}
 
 .column {
       float: left;
@@ -91,21 +119,6 @@ ul li {
       display: table;
       clear: both;
     }
-/* 
-    @media screen and (max-width:600px) {
-      .column {
-        width: 100%;
-      }
-    } */
-
-  body {
-    /*background-image: url("/instructions/tracy.JPG");
-    background-size: 100%; */
-    background-color:whitesmoke;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: black;
-    font-size: 30px;
-  }
 
   h1 { 
     color: rgb(10, 10, 10);
@@ -115,34 +128,69 @@ ul li {
     
   }
 
+  /* Sub-topics like About, Experience, etc */
   h2 {
-    color: green;
-    text-align: center;
-    font-size: 50px;
-  }
-
-  h3 {
-    color: darkblue;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: left;
-    font-size:40px;
+    font-size: 30px;
+    border-style:dashed;
   }
 
-  h4 {
-    color: purple;
+  /* software engineer title */
+  h3 { 
+    color: whitesmoke;
     text-align: center;
-    font-size:50px;
-    font-weight: 900;
+    font-size:20px;
+    margin-bottom: 10px;
+  }
+
+  /* my name Tracy Cano */
+  h4 {
+    color: white;
+    text-align: center;
+    font-size:100px;
+    border-width: 2px;
+    margin: 2px; 
+  }
+
+  h5 {
+    color: white;
+    text-align: left;
+  }
+
+  #box {
+    background-color: black;
+    background-repeat:repeat;
+    background-size: cover;
+  }
+
+  #skills {
+    background-color: black;
+    font-size: 12px;
+  }
+
+  #project-section {
+    list-style-type: none;
+    background-color: black;
   }
 
   section {
-    padding: 3px;
+    box-shadow: 6px 6px 6px black;
+    margin: 40px 20px 40px 20px;
+    animation: mymove 5s infinite;
+  }
+
+  @keyframes mymove {
+    50% {box-shadow: 10px 20px 30px black;}
   }
 
   p {
     font-family: verdana;
-    font-size: 30px;
+    font-size: 14px;
+    font-style: normal;
     padding: 5px;
-    
+    color: white;
   }
 
   .copyright {
@@ -153,72 +201,66 @@ ul li {
     display: flex;
   }
 
-  .message {
-    border-style:dashed;
-    background-color: grey;
-    width: 900px;
-    border: 15px solid blue;
-    padding: 50px;
-    margin: 20px;
-    font-size: 50px;
-    color: purple;
-    display: flex;
-    flex-direction: column;
+  #messages {
+    background-color: black;
+    background-repeat:repeat;
+    background-size: cover;
   }
 
-  #skills {
+  .message {
+    border-style:ridge;
     background-color: grey;
     width: 500px;
-    border: 15px solid blue;
-    padding: 10px;
-    margin: 20px;
-    text-align: center;
+    padding: 2px;
+    margin: 5px;
+    font-size: 24px;
+    color: purple;
+    display: flex;
+    flex-direction:column-reverse;
   }
 
   input[type=text]{
-    width: 50%;
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
-    font-size: 60px;
+    font-size: 14px;
     box-sizing: border-box;
+    border: 2px ridge #ccc;
   }
 
   input[type=email]{
-    width: 50%;
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
-    font-size: 60px;
+    font-size: 14px;
     box-sizing: border-box;
+    border: 2px ridge #ccc;
   }
 
   textarea {
-    width: 50%;
+    width: 100%;
     height: 150px;
     padding: 12px 20px;
     box-sizing: border-box;
-    border: 2px solid #ccc;
+    border: 2px ridge #ccc;
     border-radius: 4px;
     background-color: #f8f8f8;
-    font-size: 60px;
-    resize: none;
+    font-size: 14px;
   }
 
   input[type=submit] {
-    size: 100px;
+    size: 50px;
     background-color:rgb(5, 6, 6);
     border: 30px;
-    color: red;
     padding: 16px 32px;
     text-decoration: double;
-    margin: 4px 2px;
+    margin: 2px 2px;
     cursor: pointer;
   }
 
   .footer {
-    text-align: center;
-    background-color: green;
-    padding: 50px;
-    
+    text-align: left;
+    padding: 5px;
   }
 
   .links{
@@ -229,11 +271,12 @@ ul li {
     background-color: lightblue;
     border: none;
     color: purple;
-    padding: 8px 32px;
+    padding: 4px 8px 4px 4px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 50px;
+    font-size: 16px;
+    margin:4px;
   }
 
   .submit {
@@ -241,87 +284,36 @@ ul li {
   }
 
   .remove-button {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   }
 
   .edit-button {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   }
-
- /* @media screen and (max-width:600px) {
-    .column {
-      width: 100%;
-    }
-  }
-  */
-
-  /* New Experience Section */
  
   .flex-container {
   display: flex;
   background-color: grey;
-  border: 15px solid blue;
+  border: 5px ridge white;
 }
 
 .flex-container > div {
-  background-color: lightblue;
-  margin: 10px;
-  padding: 20px;
-  font-size: 30px;
+  background-color: black;
+  margin: 5px;
+  padding: 2px;
+  font-size: 20px;
+  font-variant: small-caps;
 }
 
-@media screen and (min-width: 1000px) {
-  .gfg-div {
-    background-color: #346abb;
-    color: #fff;
-  }
-}
-
-@media screen and (min-device-width: 700px)
-and (max-device-width: 1000px) {
-  .gfg-div {
-    width: 400px;
-    height: 400px;
-    background-color: rgb(64, 108, 218);
-    color: black;
-  }
-}
-
-@media screen and (max-device-width: 640px) {
-  .gfg-div {
-    width: 400px;
-    height: 200px;
-    background-color: rgb(0, 60, 255);
-    color: black;
-  }
-}
-
-@media (min-device-height: 667px) and (min-device-width: 375px)
-and (-webkit-min-device-pixel-ratio: 3) {
-  .gfg-div {
-    width: 400px;
-    height: 400px;
-    background-color: rgb(11, 112, 184);
-    color: black;
-  }
-}
-
-/*Old Experience Section
-
-.experience {
+.skillsection {
   display: flex;
   justify-content: space-evenly;
-  background-color: grey;
-  width: 500px;
-  border: 15px solid blue;
-  padding: 100px;
-  margin: 100px;
+  font-size: 400px;
 }
 
-.experience ul {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 100 px;
+@media (max-width: 400px) {
+  body {
+    background-color: lightblue;
+    flex-direction: column;
+  }
 }
-
-*/

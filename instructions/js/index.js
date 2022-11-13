@@ -1,4 +1,3 @@
-
 const today = new Date(); 
 const projectSection = document.querySelector('#project-section');
 
@@ -9,23 +8,11 @@ copyright.classList.add("copyright");
 copyright.innerHTML = `© Tracy Cano ${thisYear}`;  
 footer.appendChild(copyright);
 
-
-// const githubRequest = new XMLHttpRequest();
-// githubRequest.open("GET", "http://api.github.com/users/trca831/repos");
-// githubRequest.send();
-
 fetch('http://api.github.com/users/trca831/repos')
   .then((response) => response.json())
   .then(afterReponse)
   .catch(handleErrors);
 
-
-//githubRequest.onreadystatechange = () => {
-  //if (githubRequest.readyState === XMLHttpRequest.DONE && githubRequest.status == 200) {
-    // console.log("Success");
-    // console.log(project-section);
-   // bring back. const response = JSON.parse(githubRequest.responseText);
-   // console.log("here's our response", response);
    function afterReponse(response) {
     for (let i = 0; i < response.length; i++){
       let project = document.createElement("li");
@@ -38,14 +25,9 @@ fetch('http://api.github.com/users/trca831/repos')
       date.innerHTML = response[i].created_at;
       details.appendChild(date);
       project.appendChild(details);
-      //if(i === 0) console.log(response[i]);
-      //project.classList.add("projects");
       projectSection.appendChild(project);
     }
  }
-// this is for line 21 githubRequest.onreadystatechange...}
-
-
 
 function handleErrors (error){
   console.log("unable to load github api", error);
@@ -54,28 +36,7 @@ function handleErrors (error){
   projectSection.appendChild(item);
 }
 
-
-
-// function hydrateList(sectionId, item){
-//   const section = document.querySelector(sectionId);
-//   const ul = section.querySelector('ul');
-//   for(let i =0; i <items.length; i++){
-//     const item = document.createElement;
-// const item = items[i]
-// if(item.name){
-//   const repoLink = document.createElement('a');
-//   repoLink.href = item.url;
-//   repoLink.innerText = item.name;
-//   listItem.appendChild(repoLink);
-//   } else {
-//  listItem.innerText = skills[i];
-//  }
-//  ul.appendChild(item);
-
-//   }
-//  }
-
-let skills = ["JavaScript", "Java", "HTML5", "CSS"];
+let skills = ["JavaScript", "Java", "HTML5", "CSS", "VS Code", "AJAX", "API", "Git", "GitHub"];
 let skillsSection = document.querySelector('#skills');
 let skillsList = skillsSection.querySelector("ul");
 
@@ -84,8 +45,6 @@ for(let i = 0; i < skills.length; i++){
     skill.innerText = skills[i];
     skillsList.appendChild(skill);
 }
-
-//hydrateList('#skills', skills);
 
 let messageForm = document.querySelector('[name="leave_message"]');
 let messageCount = 0;
@@ -122,7 +81,6 @@ removeButton.addEventListener("click", (e) => {
       messageHeader.style.visibility="hidden";
       messageSection.style.visibility="hidden";
     }
-    
 });
 
 newMessage.appendChild(removeButton);
@@ -139,35 +97,10 @@ editButton.addEventListener("click", (e) => {
     messageHeader.style.visibility="hidden";
     messageSection.style.visibility="hidden";
   }
-  // let nameElement = document.querySelector("[name = name]");
-  // nameElement.value=name;
-  // let emailElement = document.querySelector("[name = email]");
-  // emailElement.value=email;
-  // let messageElement = document.querySelector("[name = message]");
-  // messageElement.value=message;
+ 
   messageForm.name.value = name;
   messageForm.email.value = email;
   messageForm.message.value = message;
   console.log(name);
 });
 });
-
-
-
-// function handleResponse(){
-//   const repositories = JSON.parse(this.response); 
-// const repos = repositories.map(repo => (
-//   {
-//     name: repo.name,
-//     url: repo.html_url
-//   }
-// )); 
-//   hydrateList('#projects', repositories.map(repo => repo.name));
-//   console.log(repositories[0].name);
-//   console.log(repositories);
-// }
-
-// const githubRequest = new XMLHttpRequest();
-//   githubRequest.addEventListener('load', handleResponse)
-//   githubRequest.open('GET', 'http://api.github.com/users/trca831/repos')
-//   githubRequest.send();
